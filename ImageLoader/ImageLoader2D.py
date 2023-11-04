@@ -53,7 +53,7 @@ def load_data(img_height, img_width, images_to_be_loaded, dataset):
 
         for i in range(img_height):
             for j in range(img_width):
-                if mask_[i, j] >= 127:
+                if (mask_[i, j] >= 127).any():
                     mask[i, j] = 1
                 else:
                     mask[i,j]=mask[i,j]
