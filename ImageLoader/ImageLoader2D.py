@@ -50,7 +50,14 @@ def load_data(img_height, img_width, images_to_be_loaded, dataset):
         pillow_mask = Image.fromarray(mask_)
         pillow_mask = pillow_mask.resize((img_height, img_width), resample=Image.LANCZOS)
         mask_ = np.array(pillow_mask)
-
+        
+        for i in range(img_height):
+            for j in range(img_width):
+                if mask_[i, j] >= 127:
+                    mask[i, j] = 1
+                else:
+                    continue
+                    
         Y_train[n] = mask
 
     Y_train = np.expand_dims(Y_train, axis=-1)
