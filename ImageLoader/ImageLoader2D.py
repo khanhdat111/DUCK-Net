@@ -55,6 +55,8 @@ def load_data(img_height, img_width, images_to_be_loaded, dataset):
             for j in range(img_width):
                 if mask_[i, j] >= 127:
                     mask[i, j] = 1
+                else:
+                    continue
 
         Y_train[n] = mask
 
