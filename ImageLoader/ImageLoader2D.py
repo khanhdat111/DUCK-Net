@@ -5,7 +5,7 @@ from PIL import Image
 from skimage.io import imread
 from tqdm import tqdm
 
-folder_path = "/kaggle/input/kvasir-seg/Kvasir-SEG/"  # Add the path to your data directory
+folder_path = "/kaggle/input/cvc-clinicdb/CVC-ClinicDB/"  # Add the path to your data directory
 
 
 def load_data(img_height, img_width, images_to_be_loaded, dataset):
