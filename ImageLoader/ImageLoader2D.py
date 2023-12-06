@@ -9,8 +9,8 @@ folder_path = "/kaggle/input/cvc-clinicdb/CVC-ClinicDB/"  # Add the path to your
 
 
 def load_data(img_height, img_width, images_to_be_loaded, dataset):
-    IMAGES_PATH = folder_path + 'Ground Truth/'
-    MASKS_PATH = folder_path + 'Original/'
+    IMAGES_PATH = folder_path + 'Original/'
+    MASKS_PATH = folder_path + 'Ground Truth/'
 
     if dataset == 'kvasir':
         train_ids = glob.glob(IMAGES_PATH + "*.jpg")
