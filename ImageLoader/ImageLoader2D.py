@@ -10,7 +10,7 @@ folder_path = "/kaggle/input/kvasir-seg/Kvasir-SEG/"  # Add the path to your dat
 
 def load_data(img_height, img_width, images_to_be_loaded, dataset):
     IMAGES_PATH = folder_path + 'images/'
-    MASKS_PATH = folder_path + 'masks'
+    MASKS_PATH = folder_path + 'masks/'
 
     if dataset == 'kvasir':
         train_ids = glob.glob(IMAGES_PATH + "*.jpg")
