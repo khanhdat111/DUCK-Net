@@ -5,12 +5,12 @@ from PIL import Image
 from skimage.io import imread
 from tqdm import tqdm
 
-folder_path = "/kaggle/input/cvc-clinicdb/CVC-ClinicDB/"  # Add the path to your data directory
+folder_path = "/kaggle/input/kvasir-seg/Kvasir-SEG/"  # Add the path to your data directory
 
 
 def load_data(img_height, img_width, images_to_be_loaded, dataset):
-    IMAGES_PATH = folder_path + 'Original/'
-    MASKS_PATH = folder_path + 'Ground Truth/'
+    IMAGES_PATH = folder_path + 'images/'
+    MASKS_PATH = folder_path + 'masks'
 
     if dataset == 'kvasir':
         train_ids = glob.glob(IMAGES_PATH + "*.jpg")
